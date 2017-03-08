@@ -950,6 +950,11 @@ void MPS::MPSAlgorithm::_searchDataInDirection(const std::vector<std::vector<std
 	}
 }
 
+void MPS::MPSAlgorithm::_radialSearch(const int& sgIdxX, const int& sgIdxY, const int& sgIdxZ, const std::vector<std::vector<std::vector<float>>>& grid, const int& maxNeighboursLimit, const float& maxRadiusLimit, std::vector<MPS::Coords3D>& L, std::vector<float>& V) {
+
+	// Construct search template
+}
+
 
 /**
 * @brief Searching a neighbor node using circular search and return back a vector L (distance between a found node and current node) and a vector V (value of the found node)

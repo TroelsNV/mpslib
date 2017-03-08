@@ -401,6 +401,20 @@ protected:
 	void _circularSearch(const int& sgIdxX, const int& sgIdxY, const int& sgIdxZ, const std::vector<std::vector<std::vector<float>>>& grid, const int& maxNeighboursLimit, const float& maxRadiusLimit, std::vector<MPS::Coords3D>& L, std::vector<float>& V);
 
 	/**
+	* @brief Searching a neighbor node using radial search and return back a vector L (distance between a found node and current node) and a vector V (value of the found node)
+	* @param sgIdxX index X in the simulation grid
+	* @param sgIdxY index Y in the simulation grid
+	* @param sgIdxZ index Z in the simulation grid
+	* @param grid the grid to search data
+	* @param maxNeighboursLimit maximum number of neigbor nodes count
+	* @param maxRadiusLimit maximum search radius allowed (-1 if not used any search radius limit)
+	* @param L output vector distances between a found nodes and the currrent node
+	* @param V output vector values of the found nodes
+	*/
+	void _radialSearch(const int& sgIdxX, const int& sgIdxY, const int& sgIdxZ, const std::vector<std::vector<std::vector<float>>>& grid, const int& maxNeighboursLimit, const float& maxRadiusLimit, std::vector<MPS::Coords3D>& L, std::vector<float>& V);
+
+
+	/**
 	* @brief Abstract function allow acces to the beginning of each simulation of each multiple grid
 	* @param level the current grid level
 	*/
